@@ -38,9 +38,14 @@ const STILL_WIDTHS = [1920, 1280, 800];
 const STILLS = {
   /* Indices scaled for the 432-frame hodu_frames2 sequence (was 240). */
   'about-threshold': 25,
+  'about-villa': 40,
+  'story-construction': 7,
+  'philosophy-villa': 373,
   'philosophy-dusk': 384,
   'architecture-entry': 40,
   'villa-signature': 416,
+  'hero-villa': 416,
+  'quality-craft': 159,
   'interior-01': 83,
   'interior-02': 112,
   'interior-03': 153,

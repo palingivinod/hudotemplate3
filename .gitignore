@@ -11,7 +11,8 @@ hodu_frames.zip
 hodu_frames2.zip
 *.zip
 
-# Generated from the original PNG frames by scripts/build-assets.mjs
+# Generated lite tier — rebuilt by scripts/build-assets.mjs on npm run frames
 public/hodu-frames-lite
-public/stills
 public/hodu-frames/manifest.json
+
+# Keep public/stills in git (needed for Netlify; build can refresh them)
