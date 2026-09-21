@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050d14" />
+
+    <title>HODU | Private Luxury Villa Builder</title>
+    <meta
+      name="description"
+      content="HODU designs, builds and delivers private luxury villas in Vijayawada — architecture, interiors, landscape and construction as one integrated process. Explore available villas and enquire."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://hodu.in/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HODU" />
+    <meta property="og:title" content="HODU | Private Luxury Villa Builder" />
+    <meta
+      property="og:description"
+      content="Private luxury villas designed, built and delivered as one coordinated process — architecture, interiors, landscape and construction quality."
+    />
+    <meta property="og:url" content="https://hodu.in/" />
+    <meta property="og:image" content="https://hodu.in/stills/final-cta-1920.webp" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta
+      property="og:image:alt"
+      content="A HODU private luxury villa lit from within at dusk, reflected in the pool"
+    />
+    <meta property="og:locale" content="en_IN" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HODU | Private Luxury Villa Builder" />
+    <meta
+      name="twitter:description"
+      content="Private luxury villas designed, built and delivered as one coordinated process — architecture, interiors, landscape and construction quality."
+    />
+    <meta name="twitter:image" content="https://hodu.in/stills/final-cta-1920.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- First hero frame, fetched before the JS bundle evaluates. The media
+         queries mirror the renderer's tier choice so neither device downloads
+         a frame it will not draw. -->
+    <link
+      rel="preload"
+      as="image"
+      href="/hodu-frames/frame_000000.png"
+      media="(min-width: 821px)"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/hodu-frames-lite/frame_000000.webp"
+      media="(max-width: 820px)"
+      fetchpriority="high"
+    />
+    <link rel="preload" as="fetch" href="/hodu-frames/manifest.json" crossorigin />
+
+    <!-- Organization + WebSite. The telephone is a placeholder and must be
+         replaced with the real number before launch, here and in the footer
+         and enquiry section. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://hodu.in/#organization",
+            "name": "HODU",
+            "description": "HODU designs and builds private luxury villas in and around Vijayawada, India, coordinating architecture, interiors, landscape and construction as one scope.",
+            "url": "https://hodu.in/",
+            "logo": "https://hodu.in/brand/hodu-logo.png",
+            "image": "https://hodu.in/stills/final-cta-1920.webp",
+            "email": "enquiries@hodu.in",
+            "telephone": "+91 99999 99999",
+            "areaServed": {
+              "@type": "City",
+              "name": "Vijayawada"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Vijayawada",
+              "addressRegion": "Andhra Pradesh",
+              "addressCountry": "IN"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://hodu.in/#website",
+            "name": "HODU",
+            "url": "https://hodu.in/",
+            "description": "Luxury villas and premium residential spaces by HODU.",
+            "inLanguage": "en-IN",
+            "publisher": { "@id": "https://hodu.in/#organization" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

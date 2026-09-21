@@ -1,0 +1,156 @@
+/* =========================================================
+   Enquiry + final CTA — single conversion section
+   ========================================================= */
+
+.contact__banner {
+  position: relative;
+  min-height: clamp(16rem, 36vh, 22rem);
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  color: var(--on-dark);
+}
+
+.contact__media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.contact__media img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+}
+
+.contact__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      105deg,
+      rgba(6, 29, 43, 0.82) 0%,
+      rgba(6, 29, 43, 0.55) 42%,
+      rgba(6, 29, 43, 0.28) 100%
+    ),
+    linear-gradient(to top, rgba(6, 29, 43, 0.65) 0%, transparent 55%);
+}
+
+.contact__banner-inner {
+  position: relative;
+  z-index: 1;
+  padding-block: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+
+.contact__banner-title {
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  max-width: 14ch;
+  color: var(--on-dark);
+}
+
+.contact__banner-title .line,
+.contact__banner-title .line > span {
+  color: inherit;
+}
+
+.contact__banner-title em {
+  font-style: italic;
+  opacity: 0.88;
+}
+
+.contact__banner-copy {
+  margin-top: 0.9rem;
+  max-width: 42ch;
+  font-size: var(--fs-small);
+  line-height: 1.65;
+  color: rgba(244, 242, 236, 0.78);
+}
+
+.contact__banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.35rem;
+}
+
+.contact__form-block {
+  padding-block: clamp(2rem, 3.5vw, 3rem);
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(1.75rem, 4vw, 4rem);
+  align-items: start;
+}
+
+.contact__form-title {
+  margin-top: 0.55rem;
+  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+  line-height: 1.08;
+}
+
+.contact__form-title em {
+  font-style: italic;
+}
+
+.contact__aside-copy {
+  margin-top: 0.85rem;
+  max-width: 36ch;
+  font-size: var(--fs-small);
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.contact__details {
+  margin-top: clamp(1.5rem, 2.5vw, 2.25rem);
+  display: grid;
+  gap: 1rem;
+}
+
+.contact__details dt {
+  font-family: var(--sans);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted-light);
+}
+
+.contact__details dd {
+  margin-top: 0.3rem;
+  font-size: var(--fs-body);
+  color: var(--ink);
+}
+
+.contact__details a {
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 1px;
+  transition: border-color 0.4s var(--ease-out);
+}
+
+.contact__details a:hover {
+  border-color: var(--teal);
+}
+
+.contact__formwrap {
+  background: var(--beige);
+  padding: clamp(1.35rem, 2.4vw, 2.25rem);
+}
+
+@media (max-width: 980px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact__banner {
+    min-height: 15rem;
+  }
+}

@@ -1,0 +1,17 @@
+node_modules
+dist
+shots
+.DS_Store
+*.log
+.env
+.env.*
+
+# Source frame archives (site uses public/hodu-frames; avoid duplicating ~412MB)
+hodu_frames.zip
+hodu_frames2.zip
+*.zip
+
+# Generated from the original PNG frames by scripts/build-assets.mjs
+public/hodu-frames-lite
+public/stills
+public/hodu-frames/manifest.json

@@ -1,0 +1,38 @@
+/* Sized to match the ~108px footprint of the real logo, so swapping the
+   artwork in does not shift the header. The negative margin cancels the
+   trailing letter-space that would otherwise push the mark off-centre. */
+.wordmark {
+  font-family: var(--serif);
+  font-size: 1.5625rem;
+  font-weight: 500;
+  letter-spacing: 0.38em;
+  margin-right: -0.38em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: inherit;
+  white-space: nowrap;
+}
+
+.wordmark--invert {
+  color: var(--on-dark);
+}
+
+/* Width-driven so the brand mark reads at a consistent 100-120px regardless of
+   the artwork's own proportions; the cap stops a tall logo growing the header. */
+.wordmark__img {
+  display: block;
+  object-fit: contain;
+  max-height: 2.5rem;
+}
+
+@media (max-width: 640px) {
+  .wordmark {
+    font-size: 1.3125rem;
+    letter-spacing: 0.34em;
+    margin-right: -0.34em;
+  }
+
+  .wordmark__img {
+    width: 88px !important;
+  }
+}

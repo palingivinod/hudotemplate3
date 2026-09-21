@@ -1,0 +1,670 @@
+/* =========================================================
+   Why HODU + Location
+   ========================================================= */
+
+.place {
+  padding-block: clamp(2.25rem, 4vw, 3.5rem);
+}
+
+.place--why {
+  padding-block: clamp(2.75rem, 4.5vw, 4rem);
+}
+
+.place__why-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.place__why-title {
+  margin-top: 0.65rem;
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+  line-height: 1.05;
+  color: var(--on-dark);
+}
+
+.place__why-lead {
+  margin-top: 0.75rem;
+  max-width: 40ch;
+  font-size: var(--fs-small);
+  line-height: 1.65;
+  color: var(--on-dark-muted);
+}
+
+.place__why-cards {
+  margin-top: clamp(1.35rem, 2.4vw, 1.85rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+
+.place__why-card {
+  padding: 0.95rem 0.9rem;
+  border: 1px solid rgba(247, 245, 240, 0.12);
+  background: rgba(7, 55, 70, 0.45);
+  transition: border-color 0.4s var(--ease-out);
+}
+
+.place__why-card:hover {
+  border-color: rgba(0, 191, 199, 0.5);
+}
+
+.place__why-num {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--hodu-mint);
+}
+
+.place__why-card-title {
+  margin-top: 0.45rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: var(--on-dark);
+}
+
+.place__why-card-copy {
+  margin-top: 0.35rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--on-dark-muted);
+}
+
+.place__why-media .media {
+  width: 100%;
+  min-height: 18rem;
+  max-height: min(48vh, 26rem);
+  outline: 1px solid rgba(0, 191, 199, 0.25);
+}
+
+/* =========================================================
+   Location — premium real-estate information section
+   ========================================================= */
+
+.loc {
+  background: var(--hodu-white);
+  padding: 0;
+  overflow-x: clip;
+}
+
+.loc__shell {
+  width: min(var(--maxw), calc(100% - clamp(1.5rem, 5vw, 3.5rem)));
+  margin-inline: auto;
+}
+
+.loc__head {
+  padding-top: clamp(2.5rem, 4.5vw, 3.75rem);
+  padding-bottom: clamp(1.15rem, 2vw, 1.75rem);
+}
+
+.loc__head-row {
+  display: grid;
+  grid-template-columns: minmax(16rem, 1.1fr) minmax(14rem, 0.9fr);
+  gap: clamp(1.25rem, 3vw, 3rem);
+  align-items: end;
+  margin-top: 0.65rem;
+}
+
+.loc__title {
+  margin: 0;
+  max-width: 14ch;
+  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.018em;
+  color: var(--hodu-text);
+  word-break: normal;
+  overflow-wrap: normal;
+  white-space: normal;
+}
+
+.loc__intro {
+  margin: 0;
+  max-width: 40ch;
+  justify-self: end;
+  font-size: var(--fs-small);
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.loc__compose {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(13.5rem, 0.85fr) minmax(0, 1.2fr);
+  gap: clamp(0.75rem, 1.25vw, 1.15rem);
+  align-items: stretch;
+  padding-bottom: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+@media (min-width: 1280px) {
+  .loc__compose {
+    grid-template-columns: minmax(0, 0.95fr) minmax(13.5rem, 0.8fr) minmax(0, 1.25fr);
+  }
+}
+
+/* ---------- Left villa ---------- */
+
+.loc__villa {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: clamp(18rem, 38vh, 22rem);
+  max-height: 22rem;
+  overflow: hidden;
+  background: var(--hodu-mist);
+}
+
+.loc__villa picture,
+.loc__villa img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.loc__villa img {
+  object-fit: cover;
+  object-position: 50% 55%;
+  transform: scale(1);
+  transition: transform 1.1s var(--ease-out);
+}
+
+.loc__villa:hover img {
+  transform: scale(1.02);
+}
+
+.loc__caption {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.85rem;
+  z-index: 1;
+  margin: 0;
+  max-width: 18ch;
+  font-family: var(--sans);
+  font-size: 0.5625rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: rgba(247, 245, 240, 0.88);
+  text-shadow: 0 1px 12px rgba(6, 29, 43, 0.45);
+}
+
+/* ---------- Middle cards ---------- */
+
+.loc__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 0;
+}
+
+.loc__card {
+  flex: 1;
+  padding: 0.8rem 0.85rem;
+  border: 1px solid var(--hodu-border);
+  background: var(--hodu-white);
+  transition:
+    border-color 0.4s var(--ease-out),
+    box-shadow 0.4s var(--ease-out);
+}
+
+.loc__card:hover {
+  border-color: rgba(0, 191, 199, 0.55);
+  box-shadow: 0 0 0 1px rgba(0, 191, 199, 0.08);
+}
+
+.loc__card-top {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+}
+
+.loc__card-num {
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--hodu-teal);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.loc__card-title {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hodu-text);
+}
+
+.loc__card-list {
+  margin: 0.55rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.loc__card-list li {
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.4rem 0;
+  border-top: 1px solid var(--hodu-border);
+}
+
+.loc__card-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.loc__card-list strong {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--hodu-text);
+}
+
+.loc__card-list span {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+/* ---------- Map ---------- */
+
+.loc__map-wrap {
+  min-width: 0;
+  height: clamp(18rem, 38vh, 22rem);
+  max-height: 22rem;
+}
+
+.loc-map {
+  position: relative;
+  height: 100%;
+  min-height: 0;
+  border: 1px solid var(--hodu-border);
+  background: var(--hodu-mist);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.loc-map__svg {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  display: block;
+}
+
+.loc-map__road {
+  fill: none;
+  stroke: rgba(6, 29, 43, 0.16);
+  stroke-width: 1.25;
+}
+
+.loc-map__road--major {
+  stroke: rgba(6, 29, 43, 0.28);
+  stroke-width: 2;
+}
+
+.loc-map__city-ring {
+  fill: rgba(247, 245, 240, 0.7);
+  stroke: rgba(6, 29, 43, 0.14);
+  stroke-width: 1;
+}
+
+.loc-map__label {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  fill: rgba(6, 29, 43, 0.55);
+}
+
+.loc-map__label--city {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  fill: var(--hodu-navy);
+}
+
+.loc-map__label--road {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  fill: var(--hodu-navy);
+}
+
+.loc-map__label--water {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  fill: rgba(7, 55, 70, 0.55);
+}
+
+.loc-map__label--dir {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  fill: rgba(6, 29, 43, 0.38);
+}
+
+.loc-map__pin {
+  cursor: default;
+  transition: transform 0.35s var(--ease-out);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.loc-map__pin:hover {
+  transform: scale(1.08);
+}
+
+.loc-map__pin-dot {
+  fill: var(--on-dark);
+  stroke: rgba(6, 29, 43, 0.35);
+  stroke-width: 1;
+}
+
+.loc-map__pin-icon {
+  fill: none;
+  stroke: var(--hodu-navy);
+  stroke-width: 1.25;
+}
+
+.loc-map__amenity {
+  fill: rgba(6, 29, 43, 0.08);
+  transition: fill 0.35s var(--ease-out);
+}
+
+.loc-map__amenity circle {
+  stroke: rgba(6, 29, 43, 0.2);
+  stroke-width: 1;
+}
+
+.loc-map__amenity text {
+  font-family: var(--sans);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  fill: rgba(6, 29, 43, 0.5);
+}
+
+.loc-map__amenity:hover {
+  fill: rgba(0, 191, 199, 0.18);
+}
+
+.loc-map__hodu {
+  cursor: default;
+  transition: transform 0.4s var(--ease-out);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.loc-map__hodu:hover {
+  transform: scale(1.08);
+}
+
+.loc-map__hodu-ring {
+  fill: none;
+  stroke: var(--hodu-teal);
+  stroke-width: 1.5;
+  opacity: 0.85;
+}
+
+.loc-map__hodu-core {
+  fill: var(--hodu-navy);
+}
+
+.loc-map__hodu-label {
+  font-family: var(--sans);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  fill: var(--on-dark);
+}
+
+.loc-map__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.25rem;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--hodu-border);
+  background: rgba(247, 245, 240, 0.92);
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.loc-map__legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.loc-map__legend-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: rgba(6, 29, 43, 0.35);
+}
+
+.loc-map__legend-dot--hodu {
+  background: var(--hodu-navy);
+  box-shadow: 0 0 0 2px rgba(0, 191, 199, 0.45);
+}
+
+.loc-map__legend-dot--life {
+  background: rgba(0, 191, 199, 0.55);
+}
+
+/* ---------- Dark strip ---------- */
+
+.loc__strip {
+  background: var(--hodu-navy);
+  color: var(--on-dark);
+  padding-block: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+
+.loc__strip-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: end;
+}
+
+.loc__strip-eyebrow {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--hodu-teal);
+}
+
+.loc__strip-title {
+  margin: 0.55rem 0 0;
+  max-width: 18ch;
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.012em;
+  color: var(--on-dark);
+}
+
+.loc__strip-text {
+  margin: 0.7rem 0 0;
+  max-width: 48ch;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(247, 245, 240, 0.68);
+}
+
+.loc__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.loc__stat {
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(247, 245, 240, 0.16);
+}
+
+.loc__stat-value {
+  display: block;
+  font-family: var(--sans);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--hodu-teal);
+}
+
+.loc__stat-label {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(247, 245, 240, 0.58);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1280px) {
+  .loc__shell {
+    width: min(var(--maxw), calc(100% - clamp(1.25rem, 4vw, 2.5rem)));
+  }
+}
+
+@media (max-width: 1100px) {
+  .loc__head-row {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 0.9rem;
+  }
+
+  .loc__intro {
+    justify-self: start;
+    max-width: 52ch;
+  }
+
+  .loc__compose {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'villa villa'
+      'cards map';
+  }
+
+  .loc__villa {
+    grid-area: villa;
+    height: clamp(14rem, 32vw, 18rem);
+    max-height: 18rem;
+  }
+
+  .loc__cards {
+    grid-area: cards;
+  }
+
+  .loc__map-wrap {
+    grid-area: map;
+    height: 100%;
+    max-height: none;
+    min-height: 18rem;
+  }
+
+  .loc-map {
+    min-height: 18rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .loc__shell {
+    width: calc(100% - clamp(1.15rem, 5vw, 1.75rem));
+  }
+
+  .loc__head {
+    padding-top: clamp(2.25rem, 8vw, 3rem);
+  }
+
+  .loc__title {
+    max-width: none;
+    font-size: clamp(1.65rem, 7vw, 2.1rem);
+  }
+
+  .loc__compose,
+  .loc__strip-inner {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+  }
+
+  .loc__villa,
+  .loc__cards,
+  .loc__map-wrap {
+    grid-area: auto;
+  }
+
+  .loc__villa {
+    height: auto;
+    max-height: none;
+    aspect-ratio: 16 / 10;
+  }
+
+  .loc__map-wrap {
+    height: auto;
+    min-height: 18rem;
+  }
+
+  .loc-map {
+    min-height: 18rem;
+  }
+
+  .loc__stats {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .loc__caption {
+    font-size: 0.5625rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loc__villa img,
+  .loc-map__pin,
+  .loc-map__hodu {
+    transition: none;
+  }
+
+  .loc__villa:hover img,
+  .loc-map__pin:hover,
+  .loc-map__hodu:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .place__why-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .place__why-cards {
+    grid-template-columns: 1fr;
+  }
+}

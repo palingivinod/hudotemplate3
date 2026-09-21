@@ -1,0 +1,93 @@
+:root {
+  /* =========================================================
+     HODU brand tokens — dark theme
+     Dominant: deep navy surfaces + warm ivory type + teal accents
+     ========================================================= */
+
+  color-scheme: dark;
+
+  --hodu-navy: #071822;
+  --hodu-deep-teal: #0c3040;
+  --hodu-teal: #00bfc7;
+  --hodu-cyan: #2ad4db;
+  --hodu-mint: #65e6c4;
+
+  /* Surfaces (dark) — keep legacy names so existing CSS remaps cleanly */
+  --hodu-white: #050d14;
+  --hodu-light: #0a1822;
+  --hodu-mist: #102230;
+
+  /* Type (light on dark) */
+  --hodu-text: #eef2f4;
+  --hodu-muted: #9aabb8;
+  --hodu-muted-soft: #7d8f9c;
+
+  --hodu-border: rgba(238, 242, 244, 0.1);
+  --hodu-border-strong: rgba(238, 242, 244, 0.18);
+  --hodu-border-dark: rgba(238, 242, 244, 0.08);
+
+  /* Compatibility aliases */
+  --ivory: var(--hodu-white);
+  --beige: var(--hodu-light);
+  --stone: var(--hodu-mist);
+  --charcoal: var(--hodu-navy);
+  --charcoal-deep: #02080c;
+
+  --ink: var(--hodu-text);
+  --ink-soft: #c5d0d8;
+  --muted: var(--hodu-muted);
+  --muted-light: var(--hodu-muted-soft);
+  --on-dark: #f3f6f8;
+  --on-dark-muted: rgba(243, 246, 248, 0.68);
+
+  --line: var(--hodu-border);
+  --line-strong: var(--hodu-border-strong);
+  --line-dark: var(--hodu-border-dark);
+
+  --navy: var(--hodu-navy);
+  --blue: var(--hodu-deep-teal);
+  --teal: var(--hodu-teal);
+  --cyan: var(--hodu-cyan);
+  --mint: var(--hodu-mint);
+  --hodu-deep-blue: var(--hodu-deep-teal);
+
+  --serif: 'Cormorant Garamond', 'Times New Roman', serif;
+  --sans: 'Manrope', 'Segoe UI', sans-serif;
+
+  --fs-display: clamp(2.25rem, 3.8vw, 3.75rem);
+  --fs-h1: clamp(2.25rem, 3.4vw, 3.5rem);
+  --fs-h2: clamp(1.75rem, 2.5vw, 2.5rem);
+  --fs-h3: clamp(1.0625rem, 1.25vw, 1.25rem);
+  --fs-h4: clamp(0.9375rem, 1vw, 1.0625rem);
+  --fs-lead: clamp(1rem, 1.05vw, 1.125rem);
+  --fs-body: clamp(0.9375rem, 0.95vw, 1.0625rem);
+  --fs-small: 0.9375rem;
+  --fs-eyebrow: 0.75rem;
+
+  --section-y: clamp(2.25rem, 3.6vw, 3.75rem);
+  --section-y-lg: clamp(2.75rem, 4.5vw, 4.75rem);
+  --gutter: clamp(1rem, 3.5vw, 2rem);
+  --grid-gap: clamp(1rem, 1.6vw, 1.75rem);
+  --maxw: 1240px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-arch: cubic-bezier(0.62, 0.01, 0.2, 1);
+  --dur: 0.9s;
+
+  --hero-scroll: 500vh;
+  --header-h: 72px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --hero-scroll: 420vh;
+    --header-h: 68px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --hero-scroll: 380vh;
+    --header-h: 60px;
+  }
+}
